@@ -12,12 +12,14 @@ export default function MyTopNavigation({ signOut }) {
   return (
     <TopNavigation
       identity={{
-        href: "#",
-        title: "Application",
+        href: "/",
+        title: "Sample Application",
+        /*
         logo: {
           src: "/logo-small-top-navigation.svg",
           alt: "Application"
         }
+        */
       }}
       utilities={[
         {

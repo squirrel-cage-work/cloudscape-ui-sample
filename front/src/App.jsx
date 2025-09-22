@@ -13,7 +13,7 @@ import SettingsSample from './components/SettingSample/SettingsSample.jsx';
 function App() {
 
   return (
-    <main className='w-full h-full'>
+    <main className='min-w-screen h-w-screen'>
       <Authenticator>
         {({ signOut, user }) => (
           <Router>

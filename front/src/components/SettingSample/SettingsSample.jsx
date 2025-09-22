@@ -5,9 +5,22 @@ export default function SettingsSample() {
     const [secondField, setSecondField] = useState("");
     const [thirdField, setThirdField] = useState("");
 
+
+    const requestApi = (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const requestBody = {
+            param1: formData.get("firstField"),
+            param2: formData.get("secondField"),
+            param3: formData.get("thirdField"),
+        };
+        alert(JSON.stringify(requestBody));    
+    };
+
     return (
         <div>
-            <BreadcrumbGroup
+            <BreadcrumbGroup 
                 items={[
                     { text: "System", href: "#" },
                     { text: "Components", href: "#components" },
@@ -19,13 +32,7 @@ export default function SettingsSample() {
                 ariaLabel="Breadcrumbs"
             />
 
-            <form onSubmit={e => {
-                e.preventDefault()
-                const formData = new FormData(e.target);
-                for (const [name, value] of formData.entries()) {
-                    console.log(`${name}: ${value}`);
-                }
-            }}>
+            <form onSubmit={requestApi}>
                 <Form
                     actions={
                         <SpaceBetween direction="horizontal" size="xs">

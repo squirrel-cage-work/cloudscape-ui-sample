@@ -30,7 +30,7 @@ export default function MyTopNavigation() {
                 }
             }}
             items={[
-                { type: "link", text: "Page 1", href: "" },
+                { type: "link", text: "Page 1", href: "/" },
                 { type: "link", text: "Page 2", href: "/page2" },
                 {
                     type: "section",
