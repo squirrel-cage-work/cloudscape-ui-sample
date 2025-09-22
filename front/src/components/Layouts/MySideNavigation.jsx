@@ -26,6 +26,7 @@ export default function MyTopNavigation() {
                     event.preventDefault();
                     navigate(event.defaul.href);
                     setActiveHref(event.detail.href);
+
                 }
             }}
             items={[
@@ -38,7 +39,7 @@ export default function MyTopNavigation() {
                         {
                             type: "link",
                             text: "Page 4",
-                            href: "#/page4"
+                            href: "/settingssample"
                         },
                         {
                             type: "link",

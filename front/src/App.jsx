@@ -8,6 +8,7 @@ import './amplifyConfig'
 // import custom page
 import Home from './components/Home/Home.jsx'
 import NotFound from './components/NotFound/NotFound.jsx';
+import SettingsSample from './components/SettingSample/SettingsSample.jsx';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Layout signOut={signOut}>
               <Routes>
                 <Route index path="/" element={<Home />} />
+                <Route index path="/settingssample" element={<SettingsSample />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>
